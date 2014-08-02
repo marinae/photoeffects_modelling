@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/GUI">
+        <file>Resources/mainicon.png</file>
+    </qresource>
+</RCC>

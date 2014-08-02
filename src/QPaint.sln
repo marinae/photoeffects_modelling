@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GUI", "GUI\GUI.vcxproj", "{F3CB0037-D35F-4A59-B68D-848E5B66D910}"
+	ProjectSection(ProjectDependencies) = postProject
+		{68559D69-91BD-4F48-9244-85A5543E2A47} = {68559D69-91BD-4F48-9244-85A5543E2A47}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "Engine\Engine.vcxproj", "{68559D69-91BD-4F48-9244-85A5543E2A47}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Console", "Console\Console.vcxproj", "{428CAF66-C7D8-44B5-B606-2F7E4EE8FE85}"
+	ProjectSection(ProjectDependencies) = postProject
+		{68559D69-91BD-4F48-9244-85A5543E2A47} = {68559D69-91BD-4F48-9244-85A5543E2A47}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3CB0037-D35F-4A59-B68D-848E5B66D910}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F3CB0037-D35F-4A59-B68D-848E5B66D910}.Debug|Win32.Build.0 = Debug|Win32
+		{F3CB0037-D35F-4A59-B68D-848E5B66D910}.Release|Win32.ActiveCfg = Release|Win32
+		{F3CB0037-D35F-4A59-B68D-848E5B66D910}.Release|Win32.Build.0 = Release|Win32
+		{68559D69-91BD-4F48-9244-85A5543E2A47}.Debug|Win32.ActiveCfg = Debug|Win32
+		{68559D69-91BD-4F48-9244-85A5543E2A47}.Debug|Win32.Build.0 = Debug|Win32
+		{68559D69-91BD-4F48-9244-85A5543E2A47}.Release|Win32.ActiveCfg = Release|Win32
+		{68559D69-91BD-4F48-9244-85A5543E2A47}.Release|Win32.Build.0 = Release|Win32
+		{428CAF66-C7D8-44B5-B606-2F7E4EE8FE85}.Debug|Win32.ActiveCfg = Debug|Win32
+		{428CAF66-C7D8-44B5-B606-2F7E4EE8FE85}.Debug|Win32.Build.0 = Debug|Win32
+		{428CAF66-C7D8-44B5-B606-2F7E4EE8FE85}.Release|Win32.ActiveCfg = Release|Win32
+		{428CAF66-C7D8-44B5-B606-2F7E4EE8FE85}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		QtVersion = 4.8.3
+	EndGlobalSection
+EndGlobal

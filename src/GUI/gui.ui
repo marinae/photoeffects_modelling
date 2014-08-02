@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GUIClass</class>
+ <widget class="QMainWindow" name="GUIClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>782</width>
+    <height>630</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Bokeh editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="gui.qrc">
+    <normaloff>:/GUI/Resources/mainicon.png</normaloff>:/GUI/Resources/mainicon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="gbImage">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>151</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <widget class="QPushButton" name="btnOpen">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>131</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Открыть</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnSave">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>131</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Сохранить</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnSaveAs">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>131</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Сохранить как...</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="gbFilters">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>151</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="btnMatr">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>131</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Defocus Map</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox">
+     <property name="geometry">
+      <rect>
+       <x>101</x>
+       <y>50</y>
+       <width>41</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>30</number>
+     </property>
+     <property name="value">
+      <number>5</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>46</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Радиус</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>46</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Порог</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>80</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>256</number>
+     </property>
+     <property name="value">
+      <number>200</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnBlur">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>131</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Lens Blur</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_3">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>110</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>51</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Усиление</string>
+     </property>
+    </widget>
+    <widget class="QGraphicsView" name="gvMask">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>131</width>
+       <height>111</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>230</y>
+       <width>46</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Маска</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnLoadMask">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>370</y>
+       <width>131</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Загрузить маску</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGraphicsView" name="gvMain">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>10</y>
+      <width>601</width>
+      <height>561</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="pbMain">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>580</y>
+      <width>761</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="textVisible">
+     <bool>true</bool>
+    </property>
+    <property name="invertedAppearance">
+     <bool>false</bool>
+    </property>
+    <property name="format">
+     <string>%p%</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>782</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="mnuOpen"/>
+    <addaction name="mnuSave"/>
+    <addaction name="mnuSaveAs"/>
+    <addaction name="separator"/>
+    <addaction name="action_6"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Справка</string>
+    </property>
+    <addaction name="action_9"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <action name="mnuOpen">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+  </action>
+  <action name="mnuSave">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="mnuSaveAs">
+   <property name="text">
+    <string>Сохранить как</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>-</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="mnuGray">
+   <property name="text">
+    <string>&quot;Серый мир&quot;</string>
+   </property>
+  </action>
+  <action name="mnuMedian">
+   <property name="text">
+    <string>Медианная фильтрация</string>
+   </property>
+  </action>
+  <action name="action_9">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="mnuGrayscale">
+   <property name="text">
+    <string>Grayscale</string>
+   </property>
+  </action>
+  <action name="mnuCanCor">
+   <property name="text">
+    <string>Поканальная коррекция</string>
+   </property>
+  </action>
+  <action name="mnuLinCor">
+   <property name="text">
+    <string>Линейная коррекция</string>
+   </property>
+  </action>
+  <action name="mnuMatr">
+   <property name="text">
+    <string>Матрица свертки (произвольное линейное преобразование)</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="gui.qrc"/>
+ </resources>
+ <connections/>
+</ui>
